@@ -51,7 +51,7 @@ const CartItems = ({ cart }) => {
                 </TableHead>
                 <TableBody>
                     {
-                        cart && cart.map((item,indx) => (
+                        cart && cart.map((item, indx) => (
                             <StyledTableRow key={indx}>
                                 <StyledTableCell>
                                     <img className="h-24 w-24" src={item.image} alt="" />
@@ -59,15 +59,21 @@ const CartItems = ({ cart }) => {
                                 <StyledTableCell>{item.title}</StyledTableCell>
                                 <StyledTableCell>{item.rating?.count}</StyledTableCell>
                                 <StyledTableCell>
-                                    
-                                    <Button onClick={()=> dispatch(removeFromCart(item.id))}>
+
+                                    <Button onClick={() => dispatch(removeFromCart(item.id))}>
                                         <span className='text-2xl text-red-500 font-extrabold'>X</span>
                                     </Button>
                                 </StyledTableCell>
                             </StyledTableRow>
                         ))
+
                     }
+                    <TableRow>
+                        <TableCell align="right" colSpan={2}>Total</TableCell>
+                        <TableCell >1000</TableCell>
+                    </TableRow>
                 </TableBody>
+
             </Table>
         </TableContainer>
     );
