@@ -119,7 +119,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            Book-Hub
+            Redux-Shop
           </Typography>
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             {navMenu}
