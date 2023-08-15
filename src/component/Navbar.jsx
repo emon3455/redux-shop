@@ -25,29 +25,27 @@ function Navbar() {
   };
 
   const navMenu = <>
-    <Box sx={{ display: 'flex' , flexDirection: { xs: 'column', md: 'row' } }}>
+    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
       <Button sx={{ color: { xs: 'black', md: 'white' } }}>
-        <Link to="/" style={{ textDecoration: 'none' , color: "inherit" }}>Home</Link>
+        <Link to="/" style={{ textDecoration: 'none', color: "inherit" }}>Home</Link>
       </Button>
 
-      <Button sx={{ color: { xs: 'black', md: 'white' } }}>
-        <Link to="/cart" style={{ textDecoration: 'none', color: "inherit" }}>
-          <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-            <Badge badgeContent={4} color="error">
-              <ShoppingCartIcon />
-            </Badge>
-          </IconButton>
-        </Link>
-      </Button>
+      <Link to="/cart" style={{ textDecoration: 'none', color: "inherit" }}>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="error">
+            <ShoppingCartIcon />
+          </Badge>
+        </IconButton>
+      </Link>
 
       <Button sx={{ color: { xs: 'black', md: 'white' } }}>
-        <Link to="/login" style={{ textDecoration: 'none', color:"inherit" }} >Login</Link>
+        <Link to="/login" style={{ textDecoration: 'none', color: "inherit" }} >Login</Link>
       </Button>
     </Box>
   </>
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#9365df' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#74baf9' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
           <Typography
@@ -62,7 +60,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            Book-Hub
+            Redux-Shop
           </Typography>
 
           <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>

@@ -6,6 +6,7 @@ import Error from "../error/Error";
 import Home from "../pages/home/Home";
 import Cart from "../pages/cart/Cart";
 import Login from "../pages/login/Login";
+import ProductDetails from "../component/ProductDetails";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
         {
             path: "/",
             element: <Home/>
+        },
+        {
+            path: "/products/:id",
+            element: <ProductDetails/>,
+            loader: ({params})=> fetch(`https://fakestoreapi.com/products/${params.id}`) 
         },
         {
             path: "/cart",
