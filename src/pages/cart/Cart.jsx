@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import CartItems from "../../component/CartItems";
-
+import Alert from '@mui/material/Alert';
 
 const Cart = () => {
 
@@ -9,6 +9,7 @@ const Cart = () => {
     return (
         <div>
             {
+                
                 cart?.length > 0
                     ?
 
@@ -18,7 +19,11 @@ const Cart = () => {
 
                     :
 
-                    "Please Order Something first"
+                    <div className="max-w-md mx-auto my-10">
+                        <Alert severity="error" color="error">
+                            Your Cart Is Empty!
+                        </Alert>
+                    </div>
 
             }
         </div>

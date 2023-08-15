@@ -11,18 +11,16 @@ import { Link } from 'react-router-dom';
 
 function Product({ item }) {
     return (
-        <Card sx={{ maxWidth: 350, }} className='flex justify-between flex-col'>
-            <div className="w-full h-60">
-                <CardMedia
-                    component="img"
-                    image={item.image}
-                    alt="green iguana"
-                    className='w-full h-full object-contain'
-                />
+        <Card className='flex justify-between flex-col'>
+            <div className='w-full'>
+                <img src={item.image} alt="product image" className='h-44 w-44 mx-auto' />
             </div>
             <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
                     {item.title}
+                </Typography>
+                <Typography gutterBottom  component="div">
+                    <span className='font-semibold'>Price:</span> <span className='font-semibold text-orange-500'>{item?.rating?.count}</span>
                 </Typography>
             </CardContent>
             <div className="p-2 text-center">

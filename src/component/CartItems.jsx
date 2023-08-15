@@ -46,7 +46,7 @@ const CartItems = ({ cart }) => {
                         <StyledTableCell>Image</StyledTableCell>
                         <StyledTableCell>Name</StyledTableCell>
                         <StyledTableCell>Price</StyledTableCell>
-                        <StyledTableCell>Action</StyledTableCell>
+                        <StyledTableCell>Remove</StyledTableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
