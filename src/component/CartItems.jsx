@@ -34,7 +34,15 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 const CartItems = ({ cart }) => {
-    console.log(cart);
+
+
+    const totalPrice = cart.reduce((accumulator, item) => {
+        if (item.rating && item.rating.count) {
+            return accumulator + item.rating.count;
+        }
+        return accumulator;
+    }, 0);
+
 
     const dispatch = useDispatch();
 
@@ -70,7 +78,7 @@ const CartItems = ({ cart }) => {
                     }
                     <TableRow>
                         <TableCell align="right" colSpan={2}>Total</TableCell>
-                        <TableCell >1000</TableCell>
+                        <TableCell >{totalPrice}</TableCell>
                     </TableRow>
                 </TableBody>
 

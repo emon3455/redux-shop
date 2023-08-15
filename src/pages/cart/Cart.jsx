@@ -5,7 +5,6 @@ import Alert from '@mui/material/Alert';
 const Cart = () => {
 
     const cart = useSelector(state => state.cart);
-
     return (
         <div>
             {

@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <div>
-      <h2 className="text-3xl font-semibold text-center my-4">ALL Products</h2>
+      <h2 className="text-3xl font-bold text-center my-4">Welcome To Our Redux Shop!!!</h2>
       {
         isLoading && <div className="max-w-xl mx-auto my-10 text-center">
           <CircularProgress disableShrink />;
