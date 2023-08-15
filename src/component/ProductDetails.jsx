@@ -8,10 +8,14 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import StarRateIcon from '@mui/icons-material/StarRate';
 import { Button } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import { addtoCart } from '../redux/slice/cartSlice';
 
 const ProductDetails = () => {
 
     const product = useLoaderData();
+
+    const dispatch = useDispatch();
 
     const handleClick = () => {
         console.log("clicked");
@@ -28,7 +32,7 @@ const ProductDetails = () => {
                         className='w-full object-contain'
                     />
                 </div>
-                <Box className="w-full md:w-3/5 md:order-1  flex flex-col justify-center p-2">
+                <Box className="w-full md:w-3/5 md:order-1  flex flex-col justify-center p-2 space-y-2">
                     <Typography variant="h6" component="div">
                         {product?.title}
                     </Typography>
@@ -52,8 +56,8 @@ const ProductDetails = () => {
                         </span>
                     </div>
 
-                    <div className="mt-2">
-                        <Button onClick={handleClick} variant="contained">Add To Cart</Button>
+                    <div>
+                        <Button onClick={()=> dispatch(addtoCart(product))} variant="contained">Add To Cart</Button>
                     </div>
                 </Box>
             </Card>

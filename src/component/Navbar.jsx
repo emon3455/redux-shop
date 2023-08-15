@@ -12,9 +12,12 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 import { Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useSelector } from 'react-redux';
 
 function Navbar() {
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const cart = useSelector(state=> state.cart);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -32,7 +35,7 @@ function Navbar() {
 
       <Link to="/cart" style={{ textDecoration: 'none', color: "inherit" }}>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
+          <Badge badgeContent={cart.length ? cart?.length : 0} color="error">
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
