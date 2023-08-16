@@ -1,14 +1,3 @@
-import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import MobileStepper from '@mui/material/MobileStepper';
-import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
     {
@@ -34,74 +23,23 @@ const images = [
 ];
 
 function Banner() {
-    const theme = useTheme();
-    const [activeStep, setActiveStep] = React.useState(0);
 
-    const handleNext = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    };
-
-    const handleBack = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    };
 
     return (
-        <Box sx={{ maxWidth: 1000, flexGrow: 1 }} className="mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-2">
 
-            <AutoPlaySwipeableViews
-                axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                index={activeStep}
-                enableMouseEvents
-            >
-                {images.map((step, index) => (
-                    <div key={step.label}>
-                        {Math.abs(activeStep - index) <= 2 ? (
-                            <Box
-                                component="img"
-                                sx={{
-                                    height: 550,
-                                    display: 'block',
-                                    maxWidth: 1000,
-                                    overflow: 'hidden',
-                                    width: '100%',
-                                }}
-                                src={step.imgPath}
-                                alt={step.label}
-                            />
-                        ) : null}
-                    </div>
-                ))}
-            </AutoPlaySwipeableViews>
+            <div className="order-2 md:order-1 flex flex-col justify-center max-w-xl">
+                <h2 className="text-2xl md:text-5xl font-extrabold mb-4">Discover the Best Deals and Latest Trends at Redux-Shop.</h2>
+                <p className="text-gray-500">
+                    Welcome to Redux-Shop: Your Gateway to Limitless Shopping Adventures! Immerse Yourself in a Treasure Trove of Products, Unleash Your Desires, and Elevate Your Lifestyle with Every Click.
+                </p>
+            </div>
 
-            <MobileStepper
-                variant="progress"
-                steps={4}
-                position="static"
-                activeStep={activeStep}
-                sx={{ maxWidth: 1000, flexGrow: 1 }}
-                nextButton={
-                    <Button size="small" onClick={handleNext} disabled={activeStep === 3}>
+            <div className="order-1 md:order-2">
+                <img className="w-full" src="https://images.unsplash.com/photo-1627061560899-1c36a3d1657e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=977&q=80" />
+            </div>
 
-                        {theme.direction === 'rtl' ? (
-                            <KeyboardArrowLeft />
-                        ) : (
-                            <KeyboardArrowRight />
-                        )}
-                    </Button>
-                }
-                backButton={
-                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                        {theme.direction === 'rtl' ? (
-                            <KeyboardArrowRight />
-                        ) : (
-                            <KeyboardArrowLeft />
-                        )}
-
-                    </Button>
-                }
-            />
-
-        </Box>
+        </div>
     );
 }
 
