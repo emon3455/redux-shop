@@ -15,7 +15,7 @@ const Services = () => {
                         Shop hassle-free and have your items delivered to your door with our reliable home delivery service.
                     </p>
                 </div>
-                <div className="shadow-2xl text-gray-600 bg-violet-100 p-4 space-y-4 md:-mt-8 hover:-translate-y-4 hover:scale-105 transition-all duration-500">
+                <div className="shadow-2xl text-gray-600 bg-violet-100 p-4 space-y-4 md:-translate-y-10 hover:-translate-y-4 hover:scale-105 transition-all duration-500">
                     <h2 className="text-2xl font-bold text-black">
                         Easy-Shopping
                     </h2>
@@ -23,7 +23,7 @@ const Services = () => {
                         Enjoy a seamless shopping experience through our intuitive platform, designed to make your selection and purchase effortless.
                     </p>
                 </div>
-                <div className="shadow-2xl text-gray-600 bg-pink-100 p-4 space-y-4hover:-translate-y-4 hover:scale-105 transition-all duration-500">
+                <div className="shadow-2xl text-gray-600 bg-pink-100 p-4 space-y-4 hover:-translate-y-4 hover:scale-105 transition-all duration-500">
                     <h2 className="text-2xl font-bold text-black">
                         Always Open
                     </h2>
