@@ -33,6 +33,10 @@ function Navbar() {
         <Link to="/" style={{ textDecoration: 'none', color: "inherit" }}>Home</Link>
       </Button>
 
+      <Button sx={{ color: { xs: 'black', md: 'white' } }}>
+        <Link to="/shop" style={{ textDecoration: 'none', color: "inherit" }}>Shop</Link>
+      </Button>
+
       <Link to="/cart" style={{ textDecoration: 'none', color: "inherit" }}>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={cart.length ? cart?.length : 0} color="error">
