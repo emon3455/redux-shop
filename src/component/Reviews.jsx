@@ -5,7 +5,7 @@ const Reviews = () => {
     return (
         <div className="">
 
-            <h2 className="text-4xl font-bold text-center ">Top <span className="text-red-500">Clients</span> </h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-center ">Top <span className="text-red-500">Clients</span> </h2>
 
             <Marquee pauseOnHover>
                 <div className="grid grid-cols-3 md:grid-cols-3 gap-14 my-16 p-4">

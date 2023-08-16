@@ -4,7 +4,7 @@ const Services = () => {
     return (
         <div className="my-20">
 
-            <h2 className="text-4xl my-10 text-violet-500 font-extrabold text-center"> ----- Service <span className="text-red-500">We</span> Provide ----- </h2>
+            <h2 className="text-2xl md:text-4xl my-10 text-violet-500 font-extrabold text-center"> ----- Service <span className="text-red-500">We</span> Provide ----- </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 p-6">
                 <div className="shadow-2xl text-gray-600 bg-sky-100 p-4 space-y-4 hover:-translate-y-4 hover:scale-105 transition-all duration-500">

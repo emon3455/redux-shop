@@ -1,27 +1,4 @@
 
-// const images = [
-//     {
-//         label: 'image1',
-//         imgPath:
-//             'https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-//     },
-//     {
-//         label: 'image2',
-//         imgPath:
-//             'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-//     },
-//     {
-//         label: 'image3',
-//         imgPath:
-//             'https://images.unsplash.com/photo-1483181957632-8bda974cbc91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-//     },
-//     {
-//         label: 'image4',
-//         imgPath:
-//             'https://images.unsplash.com/photo-1627061560899-1c36a3d1657e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=977&q=80',
-//     },
-// ];
-
 function Banner() {
 
 

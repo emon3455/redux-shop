@@ -16,8 +16,8 @@ function srcset(image, width, height, rows = 1, cols = 1) {
 
 export default function Gallery() {
     return (
-        <div className="">
-            <h2 className='text-4xl font-extrabold text-center my-10'>Redux-Shop & <span className='text-red-500'>Gallery</span></h2>
+        <div className="p-4">
+            <h2 className='text-2xl md:text-4xl font-extrabold text-center my-10'>Redux-Shop & <span className='text-red-500'>Gallery</span></h2>
             <ImageList
                 sx={{
                     maxWidth: 1240,
