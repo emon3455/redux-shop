@@ -44,10 +44,7 @@ function Navbar() {
           </Badge>
         </IconButton>
       </Link>
-
-      <Button sx={{ color: { xs: 'black', md: 'white' } }}>
-        <Link to="/login" style={{ textDecoration: 'none', color: "inherit" }} >Login</Link>
-      </Button>
+      
     </Box>
   </>
 

@@ -2,6 +2,7 @@
 
 import Banner from "../../component/Banner";
 import Gallery from "../../component/Gallery";
+import Reviews from "../../component/Reviews";
 import Services from "../../component/Services";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <Banner/>
       <Gallery/>
       <Services/>
+      <Reviews/>
     </div>
   );
 };
