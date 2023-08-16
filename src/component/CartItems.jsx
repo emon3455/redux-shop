@@ -12,6 +12,7 @@ import Paper from '@mui/material/Paper';
 import { Button } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { removeFromCart } from '../redux/slice/cartSlice';
+import Swal from 'sweetalert2';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -46,6 +47,14 @@ const CartItems = ({ cart }) => {
 
     const dispatch = useDispatch();
 
+    const handlePayment =()=>{
+        Swal.fire(
+            'Payment!',
+            'This Feature is Under Development',
+            'question'
+        )  
+    }
+
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -77,8 +86,13 @@ const CartItems = ({ cart }) => {
 
                     }
                     <TableRow>
-                        <TableCell align="right" colSpan={2}>Total</TableCell>
-                        <TableCell >{totalPrice}</TableCell>
+                        <TableCell align="right" colSpan={2}> <span className='font-semibold'>Total:</span> </TableCell>
+                        <TableCell ><span className='font-semibold text-red-500'>{totalPrice}</span></TableCell>
+                        <TableCell>
+                            <Button  onClick={handlePayment} variant="contained">
+                                Pay
+                            </Button>
+                        </TableCell>
                     </TableRow>
                 </TableBody>
 

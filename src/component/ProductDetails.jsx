@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import StarRateIcon from '@mui/icons-material/StarRate';
-import { Button } from '@mui/material';
+import { Button, Rating } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { addtoCart } from '../redux/slice/cartSlice';
 
@@ -37,13 +37,11 @@ const ProductDetails = () => {
                     </Typography>
                     <div className="flex items-center space-x-2">
                         <span className='font-semibold'>Rating:</span>
-                        <span className='text-orange-400'>
-                            <StarRateIcon />
-                            <StarRateIcon />
-                            <StarRateIcon />
-                            <StarRateIcon />
-                            <StarRateIcon />
-                        </span>
+                        <Rating
+                            name="readOnly"
+                            value={product?.rating?.rate}
+                            readOnly
+                        />
                         <span>
                             {product?.rating?.rate}
                         </span>
